@@ -1,10 +1,4 @@
-//
-//  main.cpp
-//  baek_1149_RGB거리
-//
-//  Created by 윤정인 on 2018. 7. 2..
-//  Copyright © 2018년 윤정인. All rights reserved.
-//
+
 
 #include <iostream>
 
