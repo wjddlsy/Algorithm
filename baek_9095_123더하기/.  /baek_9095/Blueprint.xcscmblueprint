@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4E62B1BC2433B926060DCDCF5D93FF8E52712C0B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4E62B1BC2433B926060DCDCF5D93FF8E52712C0B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BD795C44-4054-4E57-A7EF-8C207487AFFC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4E62B1BC2433B926060DCDCF5D93FF8E52712C0B" : "Algorithm_book\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "baek_9095",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "baek_9095\/baek_9095.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wjddlsy\/Algorithms.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4E62B1BC2433B926060DCDCF5D93FF8E52712C0B"
+    }
+  ]
+}
