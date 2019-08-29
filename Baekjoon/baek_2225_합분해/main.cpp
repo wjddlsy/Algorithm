@@ -8,12 +8,12 @@ const long long MOD=1000000000;
 int main() {
     int N, K;
     cin>>N>>K;
-    long long cache[201][201];
+    long long cache[201][201]={0};
     for(int i=0; i<=N; ++i) {
         cache[i][1]=1;
         for(int j=0; j<=i; ++j) {
             for(int k=2; k<=K; ++k)
-                cache[i][k]=(cache[j][K-k]+cache[j][k])%MOD;
+                cache[i][k]=(cache[i][k]+cache[j][k-1])%MOD;
         }
     }
     cout<<cache[N][K]%MOD;
