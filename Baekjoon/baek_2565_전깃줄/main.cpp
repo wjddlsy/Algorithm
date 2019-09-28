@@ -3,6 +3,7 @@
 #include <algorithm>
 using namespace std;
 
+const int INF = 987654321;
 int main() {
     int n;
     cin>>n;
@@ -13,20 +14,17 @@ int main() {
         p.emplace_back(a, b);
     }
     sort(p.begin(), p.end());
-    int ret = 0;
-    for(int i=0; i<n; ++i) {
-        int cnt = 1;
-        int comp = i;
-        for(int j=i+1; j<n; ++j) {
-            if(p[comp].first < p[j].first && p[comp].second < p[j].second) {
-                cnt ++;
-                comp = j;
-            }
-        }
-        ret = max(ret, cnt);
-    }
+    vector<int> lis {-INF, };
 
-    cout<<n-ret;
+    for(auto &pp:p) {
+        if(lis.back() < pp.second)
+            lis.emplace_back(pp.second);
+        else {
+            auto it = lower_bound(lis.begin(), lis.end(), pp.second);
+            *it = pp.second;
+        }
+    }
+    cout<<n-lis.size()+1;
     //std::cout << "Hello, World!" << std::endl;
     return 0;
 }
