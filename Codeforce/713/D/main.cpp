@@ -18,6 +18,7 @@ void precomputeLog() {
         LOG[i] = LOG[i/2] + 1;
     }
 }
+
 void precomputeCache() {
     for (int i = 0; i < n; ++i) {
         cache[i][0] = board[i][0];
@@ -37,6 +38,7 @@ void precomputeCache() {
 }
 
 void precomputeST() {
+
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             st[i][j][0][0] = cache[i][j];
@@ -62,12 +64,14 @@ void precomputeST() {
             }
         }
     }
+
 }
+
 
 int query(int x1, int y1, int x2, int y2) {
     int dist1 = LOG[x2 - x1 + 1], dist2 = LOG[y2 - y1 + 1];
     return max({st[x1][y1][dist1][dist2], st[x2 - (1 << dist1) + 1][y1][dist1][dist2],
-               st[x1][y2-(1<<dist2)+1][dist1][dist2], st[x2-(1<<dist1)+1][y2-(1<<dist2)+1][dist1][dist2]});
+                st[x1][y2-(1<<dist2)+1][dist1][dist2], st[x2-(1<<dist1)+1][y2-(1<<dist2)+1][dist1][dist2]});
 }
 
 bool compute(int x1, int y1, int x2, int y2, int x) {
